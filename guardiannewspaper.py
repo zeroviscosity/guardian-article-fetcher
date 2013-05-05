@@ -10,10 +10,10 @@ from dateutil import parser
 class ArticleFetcher():
     def __init__(self, format='json', page_size=10, page=1, api_key=None, 
             from_date=None, to_date=None, tag=None, show_fields=None, 
-            show_tags=None, show_refinements=None, section=None, max=0):
+            show_tags=None, show_refinements=None, section=None, max_pages=0):
         """Defines the fetcher url"""
         self.page = page
-        self.max = max
+        self.max_pages = max_pages
         
         params = []
         params.append('format=%s' % format)
@@ -44,7 +44,7 @@ class ArticleFetcher():
         """Retrieves the total number of pages for the current operation"""
         r = requests.get(self.url % 1)
         resp = (json.loads(r.text))['response']
-        return min(self.max, resp['pages'])
+        return min(self.max_pages, resp['pages'])
         
     def get_data(self, page_number):
         """Fetches a page of articles from the API"""
