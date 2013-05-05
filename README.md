@@ -17,7 +17,8 @@ Arguments (all are optional):
 * show_refinements=None
 * section=None
 * max_pages=0
-  
+
+Usage:
 
     from guardiannewspaper import ArticleFetcher
     
