@@ -4,15 +4,15 @@
 
 ### Usage
 
-    from guardiannewspaper import ArticleFetcher
+    from guardianapi import ArticleFetcher
     
     fetcher = ArticleFetcher()
     for article in fetcher.fetch():
         print article # Or do something more interesting
         
-Calling `fetch()` returns a generator of articles. Articles are retrieved one 
-page at a time, with `page_size` articles being retrieved with each page. To
-get the total number of pages available, use `get_total_pages()`.
+Calling `fetch()` returns a generator of articles in JSON format. Articles are 
+retrieved one page at a time, with `page_size` articles being retrieved with 
+each page. To get the total number of pages available, use `get_total_pages()`.
 
 ### Parameters
 
@@ -26,9 +26,6 @@ http://www.guardian.co.uk/open-platform/getting-started
   `max_pages` is left at 0, then it will retrieve as many pages as possible. 
   Otherwise it will retrieve the minimum of the total number of pages avaible 
   and `max_pages`.
-* `format`
-  * Default: 'json'
-  * The other option is 'xml'.
 * `page_size`
   Default: 10
   * `page_size` can be set as high as 50, but The Guardian recommends keeping it 
@@ -65,6 +62,10 @@ http://www.guardian.co.uk/open-platform/getting-started
 * `show_refinements`
   * Default: None
   * See http://www.guardian.co.uk/open-platform/getting-started for more info.
+
+### To Do
+
+Add XML support
 
 ### Origin
 

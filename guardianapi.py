@@ -8,15 +8,14 @@ from dateutil import parser
 
 
 class ArticleFetcher():
-    def __init__(self, max_pages=0, format='json', page_size=10, page=1, 
-            api_key=None, from_date=None, to_date=None, section=None, tag=None,
+    def __init__(self, max_pages=0, page_size=10, page=1, api_key=None, 
+            from_date=None, to_date=None, section=None, tag=None,
             show_fields=None, show_tags=None, show_refinements=None):
         """Defines the fetcher url"""
         self.page = page
         self.max_pages = max_pages
         
         params = []
-        params.append('format=%s' % format)
         params.append('page-size=%d' % page_size)
         
         if api_key:
@@ -36,7 +35,7 @@ class ArticleFetcher():
         if show_refinements:
             params.append('show-refinements=%s' % show_refinements)
         
-        self.url = 'http://content.guardianapis.com/search?%s' % \
+        self.url = 'http://content.guardianapis.com/search?format=json&%s' % \
                 '&'.join(params)
         self.url += '&page=%d'
     
