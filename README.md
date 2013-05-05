@@ -66,4 +66,7 @@ http://www.guardian.co.uk/open-platform/getting-started
   * Default: None
   * See http://www.guardian.co.uk/open-platform/getting-started for more info.
 
-  
+### Origin
+
+This project is an offshoot of the fetcher used by my team in the Big Data Week 
+13 Hackathon in Toronto: https://github.com/Kevinyuen/bdw13-hackathon 
