@@ -11,7 +11,8 @@
         print article # Or do something more interesting
         
 Calling `fetch()` returns a generator of articles. Articles are retrieved one 
-page at a time, with `page_size` articles being retrieved with each page. 
+page at a time, with `page_size` articles being retrieved with each page. To
+get the total number of pages available, use `get_total_pages()`.
 
 ### Parameters
 
@@ -19,6 +20,12 @@ All parameters are optional. With the exception of `max_pages`, they all map to
 API parameters. For more information, visit:
 http://www.guardian.co.uk/open-platform/getting-started
 
+* `max_pages`
+  * Default: 0
+  * This the only paramenter that is not passed along to The Guardian API. If 
+  `max_pages` is left at 0, then it will retrieve as many pages as possible. 
+  Otherwise it will retrieve the minimum of the total number of pages avaible 
+  and `max_pages`.
 * `format`
   * Default: 'json'
   * The other option is 'xml'.
@@ -39,6 +46,10 @@ http://www.guardian.co.uk/open-platform/getting-started
 * `to_date`
   * Default: None
   * Format: YYYY-MM-DD
+* `section`
+  * Default: None
+  * See http://explorer.content.guardianapis.com/#/sections?format=json for the
+  available options.
 * `tag`
   * Default: None
   * Allows search refinement via tags. Comma separate multiple tags.
@@ -54,14 +65,5 @@ http://www.guardian.co.uk/open-platform/getting-started
 * `show_refinements`
   * Default: None
   * See http://www.guardian.co.uk/open-platform/getting-started for more info.
-* `section`
-  * Default: None
-  * See http://explorer.content.guardianapis.com/#/sections?format=json for the
-  available options.
-* `max_pages`
-  * Default: 0
-  * This the only paramenter that is not passed along to The Guardian API. If 
-  `max_pages` is left at 0, then it will retrieve as many pages as possible. 
-  Otherwise it will retrieve the minimum of the total number of pages avaible 
-  and `max_pages`.
+
   

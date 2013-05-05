@@ -8,9 +8,9 @@ from dateutil import parser
 
 
 class ArticleFetcher():
-    def __init__(self, format='json', page_size=10, page=1, api_key=None, 
-            from_date=None, to_date=None, tag=None, show_fields=None, 
-            show_tags=None, show_refinements=None, section=None, max_pages=0):
+    def __init__(self, max_pages=0, format='json', page_size=10, page=1, 
+            api_key=None, from_date=None, to_date=None, section=None, tag=None,
+            show_fields=None, show_tags=None, show_refinements=None):
         """Defines the fetcher url"""
         self.page = page
         self.max_pages = max_pages
@@ -25,6 +25,8 @@ class ArticleFetcher():
             params.append('from-date=%s' % from_date)
         if to_date:
             params.append('to-date=%s' % to_date)
+        if section:
+            params.append('section=%s' % section)
         if tag:
             params.append('tag=%s' % tag)
         if show_fields:
@@ -33,9 +35,7 @@ class ArticleFetcher():
             params.append('show-tags=%s' % show_tags)
         if show_refinements:
             params.append('show-refinements=%s' % show_refinements)
-        if section:
-            params.append('section=%s' % section)
-            
+        
         self.url = 'http://content.guardianapis.com/search?%s' % \
                 '&'.join(params)
         self.url += '&page=%d'
