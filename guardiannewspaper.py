@@ -62,6 +62,7 @@ class ArticleFetcher():
         """Starts the fetching process"""
         self.total_pages = self.get_total_pages()
         for i in range(self.page, self.total_pages + 1):
-            yield self.get_data(i)
+            for article in self.get_data(i):
+                yield article
 
 
