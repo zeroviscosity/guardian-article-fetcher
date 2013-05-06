@@ -72,4 +72,6 @@ Add XML support
 This project is an offshoot of the fetcher used by my team 
 ([Kevinyuen](https://github.com/Kevinyuen) and [echau](https://github.com/echau)) 
 in the Big Data Week 13 Hackathon in Toronto: 
-https://github.com/Kevinyuen/bdw13-hackathon 
+
+* https://github.com/Kevinyuen/bdw13-hackathon
+* http://viafoura.com/blog/viafoura-hack-a-thon-a-success/
