@@ -74,7 +74,7 @@ in the Big Data Week 13 Hackathon in Toronto:
 * https://github.com/Kevinyuen/bdw13-hackathon
 * http://viafoura.com/blog/viafoura-hack-a-thon-a-success/
 
-I would like to thank [http://viafoura.com](Viafoura) for sponsoring the Toronto 
-installment of [http://viafoura.com/bdw/](Big Data Week 13) and The Guardian for 
-providing the [http://www.guardian.co.uk/open-platform](Open Platform).
+I would like to thank [Viafoura](http://viafoura.com) for sponsoring the Toronto 
+installment of [Big Data Week 13](http://viafoura.com/bdw/) and The Guardian for 
+providing the [Open Platform](http://www.guardian.co.uk/open-platform).
 
