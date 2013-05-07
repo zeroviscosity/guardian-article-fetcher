@@ -2,12 +2,14 @@
 
 ### Usage
 
-    from guardianapi import ArticleFetcher
-    
-    fetcher = ArticleFetcher()
-    for article in fetcher.fetch():
-        print article # Or do something more interesting
-        
+```python
+from guardianapi import ArticleFetcher
+
+fetcher = ArticleFetcher()
+for article in fetcher.fetch():
+    print article # Or do something more interesting
+```
+
 Calling `fetch()` returns a generator of articles in JSON format. Articles are 
 retrieved one page at a time, with `page_size` articles being retrieved with 
 each page. To get the total number of pages available, use `get_total_pages()`.
