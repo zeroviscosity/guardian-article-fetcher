@@ -3,8 +3,6 @@
 import sys
 import requests
 import json
-from argparse import ArgumentParser
-from dateutil import parser
 
 
 class ArticleFetcher():
